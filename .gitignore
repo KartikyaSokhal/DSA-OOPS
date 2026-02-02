@@ -1,4 +1,9 @@
 ### IntelliJ IDEA ###
+.idea/
+*.iml
+out/
+
+### IntelliJ IDEA ###
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
