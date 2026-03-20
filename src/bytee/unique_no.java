@@ -1,12 +1,15 @@
 package bytee;
 
 public class unique_no {
+    // have to find
     public static int unique(int[] arr){
-        int xor = 0;
+        int result = 0;
+
         for (int i =0;i<arr.length;i++){
-            xor ^= arr[i];
+            result ^= arr[i];
         }
-        return xor;
+
+        return result;
     }
     public static void main(String[] args){
         int[] arr = {4,1,2,1,2};
