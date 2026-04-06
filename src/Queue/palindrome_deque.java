@@ -1,5 +1,8 @@
-package Stack;
-import java.util.*;
+package Queue;
+
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 public class palindrome_deque {
     public static void main(String[] args){
         String s = "m";
