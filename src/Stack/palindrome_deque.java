@@ -1,4 +1,4 @@
-package stack_queues;
+package Stack;
 import java.util.*;
 public class palindrome_deque {
     public static void main(String[] args){

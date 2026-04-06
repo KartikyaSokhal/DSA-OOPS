@@ -1,4 +1,4 @@
-package stack_queues;
+package Queue;
 
 public class queue_creation {
     private int[] arr;

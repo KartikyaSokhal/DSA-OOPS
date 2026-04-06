@@ -1,4 +1,4 @@
-package stack_queues;
+package Queue;
 
 public class circular_queue {
     int size;
