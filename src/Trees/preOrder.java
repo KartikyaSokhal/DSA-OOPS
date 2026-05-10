@@ -30,7 +30,7 @@ public class preOrder {
              }
              System.out.print(root.data + " ");
              preOrder(root.left);
-             preOrder(root.right) ;
+             preOrder(root.right)  ;
          }
 
      }
