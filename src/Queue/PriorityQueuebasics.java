@@ -2,7 +2,7 @@ package Queue;
 
 import java.util.Collections;
 
-public class PriorityQueue {
+public class PriorityQueuebasics {
     public static void main(String[] args) {
         java.util.PriorityQueue<Integer> q = new java.util.PriorityQueue<>(Collections.reverseOrder());
 

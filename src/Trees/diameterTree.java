@@ -1,41 +1,47 @@
 package Trees;
 
-class Node {
-    int data;
-    Node left, right;
-
-    Node(int data) {
-        this.data = data;
-        this.left = null;
-        this.right = null;
-    }
-}
-
 public class diameterTree {
+    static class Node {
+        int data;
+        Node left, right;
+        public Node (int data){
+            this.data = data;
+            this.left = null;
+            this.right = null;
+        }
+    }
 
-    int diameter = 0;
-
-    // Function to calculate height and update diameter
-    int height(Node root) {
-        if (root == null)
-            return 0;
+    static int height(Node root){
+        if (root==null) return 0;
 
         int left = height(root.left);
-        int right = height(root.right); // FIXED: was root.left
+        int right = height(root.right);
 
-        // Update diameter
-        diameter = Math.max(diameter, left + right);
-
-        // Return height
-        return 1 + Math.max(left, right);
+        return Math.max(left,right) + 1;
     }
 
-    // Function to get diameter of tree
-    int diameterOfTree(Node root) {
-        diameter = 0;
-        height(root);
-        return diameter;
+    // time complexity if O(n^2)
+    static int diameter1(Node root){
+        if (root==null) return 0;
+
+        int leftdia = diameter1(root.left);
+        int leftheight = height(root.left);
+        int rightdia = diameter1(root.right);
+        int rightheight = height(root.right);
+
+        int selfdia = leftheight + rightheight + 1;
+
+        return Math.max(selfdia, Math.max(leftdia,rightdia));
     }
+
+//    static int diameter2(Node root){
+//        if (root==null) return 0;
+//
+//        int leftdia = diameter2(root.left);
+//
+//    }
+
+
 
     public static void main(String[] args) {
 
@@ -55,8 +61,7 @@ public class diameterTree {
         root.left.left = new Node(4);
         root.left.right = new Node(5);
 
-        int result = tree.diameterOfTree(root);
+        System.out.println(diameter1(root));
 
-        System.out.println("Diameter of Tree: " + result);
     }
 }
