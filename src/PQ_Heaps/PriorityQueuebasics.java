@@ -1,4 +1,4 @@
-package Queue;
+package PQ_Heaps;
 
 import java.util.Collections;
 

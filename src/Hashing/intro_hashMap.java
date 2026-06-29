@@ -11,11 +11,15 @@ public class intro_hashMap {
         map.put("China", 2);
         map.put("USA", 3);
 
-        System.out.print(map.get("India"));
+//        System.out.print(map.get("India"));
+//
+//        for (Map.Entry<String, Integer> e : map.entrySet()){
+//            System.out.println(e.getKey());
+//            System.out.println(e.getValue());
+//        }
 
-        for (Map.Entry<String, Integer> e : map.entrySet()){
-            System.out.println(e.getKey());
-            System.out.println(e.getValue());
+        for (String i: map.keySet()){
+            System.out.println(i + " " + map.get(i));
         }
     }
 }
